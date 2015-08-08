@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transitioning Area Chart</title>
+    <script src="d3.min.js"></script>
+    <script src="transitioning-area-chart.js"></script>
+    <style>
+        body {
+            background: #2E2E2B;
+        }
+
+        #myChart {
+            width: 80%;
+            position: absolute;
+            top: 20%;
+            left: 10%;
+        }
+
+    </style>
+</head>
+<body>
+<div id="myChart"></div>
+<script>
+    (function () {
+        d3.select('#myChart').call(transitioningAreaChart);
+    }());
+</script>
+</body>
+</html>
