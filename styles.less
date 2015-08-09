@@ -1,0 +1,41 @@
+@standardColor : #49B3D5;
+@thresholdColor : #EE5B33;
+@white : #F9F9EC;
+@black : #2E2E2B;
+@fontFamily : "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+body {
+  background: @black;
+}
+
+#myChart {
+  width: 80%;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+
+  .minThreshold {
+    fill: @thresholdColor;
+  }
+
+  .area {
+    fill: url(#area-gradient);
+  }
+
+  .thresholdLine {
+    stroke: @white;
+    stroke-width: 1px;
+    stroke-linecap: round;
+    stroke-dasharray: 1,7;
+  }
+
+  .yAxis {
+    fill: none;
+    stroke-width: 0;
+
+    text {
+      fill: @thresholdColor;
+      font-family: @fontFamily;
+    }
+  }
+}
