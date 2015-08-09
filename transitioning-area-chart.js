@@ -1,22 +1,21 @@
 function transitioningAreaChart(selection) {
-  var aspectRatio = 21 / 9;
-  margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = selection.node().getBoundingClientRect().width - margin.left - margin.right,
-    height = (width / aspectRatio) - margin.top - margin.bottom,
-    dataSize = 60,
-    maxValue = 10000,
-    threshold = {
-      min: 1500,
-      max: 7500
-    },
-    random = function () {
-      return Math.floor(Math.random() * maxValue);
-    },
-    data = d3.range(dataSize).map(random),
-    standardColor = '#49B3D5',
-    thresholdColor = '#EE5B33',
-    white = '#F9F9EC',
-    updateFrequency = 3000;
+  var aspectRatio = 21 / 9,
+      margin = {top: 20, right: 20, bottom: 30, left: 50},
+      width = selection.node().getBoundingClientRect().width - margin.left - margin.right,
+      height = (width / aspectRatio) - margin.top - margin.bottom,
+      dataSize = 60,
+      maxValue = 10000,
+      threshold = {
+        min: 1500,
+        max: 7500
+      },
+      random = function () {
+        return Math.floor(Math.random() * maxValue);
+      },
+      data = d3.range(dataSize).map(random),
+      standardColor = '#49B3D5',
+      thresholdColor = '#EE5B33',
+      white = '#F9F9EC';
 
   var svg = selection.append('svg')
     .attr('height', height + margin.left + margin.right)
