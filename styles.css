@@ -1,0 +1,29 @@
+body {
+  background: #2e2e2b;
+}
+#myChart {
+  width: 80%;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+#myChart .minThreshold {
+  fill: #ee5b33;
+}
+#myChart .area {
+  fill: url(#area-gradient);
+}
+#myChart .thresholdLine {
+  stroke: #f9f9ec;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-dasharray: 1,7;
+}
+#myChart .yAxis {
+  fill: none;
+  stroke-width: 0;
+}
+#myChart .yAxis text {
+  fill: #ee5b33;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
