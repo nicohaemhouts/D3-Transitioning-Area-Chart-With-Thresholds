@@ -55,7 +55,7 @@ function transitioningAreaChart(selection) {
     .attr({
       'x' : x(1),
       'y' : 0,
-      'width' : x(data.length - 2),
+      'width' : x(data.length - 3),
       'height' : height
     });
 
